@@ -1,0 +1,110 @@
+
+body.vsc-initialized, body{
+    margin: 0 0;
+}
+
+html{
+    background-color: black;
+}
+
+body{
+    display: flex;
+    flex-flow: column;
+}
+
+#numWrapper {
+    margin: 1em 1em;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 1.5em 0.2em;
+}
+
+#numWrapper p{
+    all: unset;
+}
+
+
+
+.items{
+    background-color: lawngreen;
+    min-width: 3em;
+    padding: 0.7em 1em;
+    font-size: 1.4em;
+    border-radius: 5%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.items input{
+    all: unset;
+    background-color: white;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+
+}
+
+.items:hover{
+    animation: scaleUp 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.delPng{
+    all:unset;
+    /*position: relative;*/
+    /*left: 0.7em;*/
+    transition: opacity 0.3s ease;
+    opacity: 10%;
+}
+.delPng:hover{
+    opacity: 100%;
+}
+
+.incrementers, .decrementers{
+    position: absolute;
+    cursor: default;
+    border-radius: 100%;
+    font-size: 0.3em;
+    top:50%;
+    translate: 0 -50%;
+    transition: opacity 0.3s ease;
+    opacity: 40%;
+}
+
+.incrementers:hover, .decrementers:hover{
+    opacity: 100%;
+    animation: scaleUp 0.5s;
+    animation-fill-mode: forwards;
+}
+.incrementers{
+    background-color: blue;
+    left: -1.48em;
+}
+.decrementers{
+    background-color: red;
+    right: -1.48em;
+}
+
+
+#inputWrapper{
+    /*align-self: end;*/
+    position: fixed;
+    margin: 1em 2em;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+
